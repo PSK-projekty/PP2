@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS     //Usuwanie b≥Ídu C4996 (scanf may by unsafe.  Consider using scanf_s)
+#define _CRT_SECURE_NO_WARNINGS     //Usuwanie b≈Çƒôdu C4996 (scanf may by unsafe.  Consider using scanf_s)
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,14 +7,14 @@
 
 
 typedef struct node {
-    int data;     //zmienna przechowujπca wybÛr uøytkownika
-    struct node* next;  //wskaünik na nastÍpny element listy
+    int data;     //zmienna przechowujƒÖca wyb√≥r u≈ºytkownika
+    struct node* next;  //wska≈∫nik na nastƒôpny element listy
 }node;
 
 void show(node* head);  //wyswietlanie listy
-void push_back(node** head, int option);   //dodawanie do elementÛw do listy
+void push_back(node** head, int option);   //dodawanie do element√≥w do listy
 
-//wywo≥ania funkcji odpowiedzialnych za mechanikÍ programu
+//wywo≈Çania funkcji odpowiedzialnych za mechanikƒô programu
 void create_directory(char path[], char name[]);
 void remove_directory(char path[], char name[]);
 void create_text_file(char path[], char name[], char text[]);
@@ -27,7 +27,7 @@ void search(char path[], char name[]);
 int main() {
     system("chcp 1250");   //polskie znaki
 
-    //obs≥uga listy
+    //obs≈Çuga listy
     node* head;
     head = (node*)malloc(sizeof(node));
     head = NULL;
@@ -47,20 +47,20 @@ int main() {
         system("cls");
 
         printf("\n Historia operacji: ");
-        show(head); //wyúwietlanie listy, historia wyborÛw
+        show(head); //wy≈õwietlanie listy, historia wybor√≥w
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15); //kolorowanie tekstu
-        printf("\n\n Drogi uøytkowniku! Co chcesz zrobiÊ?\n\n");
-        printf(" 1. StworzyÊ katalog.\n");
-        printf(" 2. UsunπÊ katalog.\n");
-        printf(" 3. UtworzyÊ plik tekstowy.\n");
-        printf(" 4. UsunπÊ plik tekstowy.\n");
-        printf(" 5. ZmieniÊ nazwÍ pliku.\n");
-        printf(" 6. SkopiowaÊ plik.\n");
-        printf(" 7. WyúwietliÊ informacje o pliku.\n");
-        printf(" 8. SzukaÊ plikÛw/folderÛw.\n");
-        printf(" 9. ZmieniÊ atrybuty\n");
-        printf(" 10. PrzenieúÊ pliki miÍdzy katalogami \n");
-        printf(" 0. ZakoÒczyÊ program.\n");
+        printf("\n\n Drogi u≈ºytkowniku! Co chcesz zrobiƒá?\n\n");
+        printf(" 1. Stworzyƒá katalog.\n");
+        printf(" 2. UsunƒÖƒá katalog.\n");
+        printf(" 3. Utworzyƒá plik tekstowy.\n");
+        printf(" 4. UsunƒÖƒá plik tekstowy.\n");
+        printf(" 5. Zmieniƒá nazwƒô pliku.\n");
+        printf(" 6. Skopiowaƒá plik.\n");
+        printf(" 7. Wy≈õwietliƒá informacje o pliku.\n");
+        printf(" 8. Szukaƒá plik√≥w/folder√≥w.\n");
+        printf(" 9. Zmieniƒá atrybuty\n");
+        printf(" 10. Przenie≈õƒá pliki miƒôdzy katalogami \n");
+        printf(" 0. Zako≈Ñczyƒá program.\n");
 
         printf("\n Wybieram: ");
         scanf("%d", &option);
@@ -72,91 +72,91 @@ int main() {
             break;
 
         case 1:
-            printf("Podaj úcieøkÍ bezwzglÍdnπ do miejsca w ktÛrym chcesz utworzyÊ katalog: ");
+            printf("Podaj ≈õcie≈ºkƒô bezwzglƒôdnƒÖ do miejsca w kt√≥rym chcesz utworzyƒá katalog: ");
             scanf("%s", &path);
 
-            printf("Podaj nazwÍ: ");
+            printf("Podaj nazwƒô: ");
             scanf("%s", &name);
 
             push_back(&head, option);   //zapisanie wyboru do listy
-            create_directory(path, name);   //wywo≥anie funkcji tworzπcej katalog
+            create_directory(path, name);   //wywo≈Çanie funkcji tworzƒÖcej katalog
             break;
 
         case 2:
-            printf("Podaj úcieøkÍ bezwzglÍdnπ do katalogu ktÛry chcesz usunπÊ: ");
+            printf("Podaj ≈õcie≈ºkƒô bezwzglƒôdnƒÖ do katalogu kt√≥ry chcesz usunƒÖƒá: ");
             scanf("%s", &path);
 
-            printf("Podaj nazwÍ katalogu: ");
+            printf("Podaj nazwƒô katalogu: ");
             scanf("%s", &name);
 
             push_back(&head, option);
-            remove_directory(path, name);   //wywo≥anie funkcji usuwajπcej katalog
+            remove_directory(path, name);   //wywo≈Çanie funkcji usuwajƒÖcej katalog
             break;
 
         case 3:
-            printf("Podaj úcieøkÍ bezwzglÍdnπ do katalogu w ktÛrym chcesz utworzyÊ plik: ");
+            printf("Podaj ≈õcie≈ºkƒô bezwzglƒôdnƒÖ do katalogu w kt√≥rym chcesz utworzyƒá plik: ");
             scanf("%s", &path);
 
-            printf("Podaj nazwÍ pliku: ");
+            printf("Podaj nazwƒô pliku: ");
             scanf("%s", &name);
 
-            printf("Podaj treúÊ ");
+            printf("Podaj tre≈õƒá ");
             scanf("%s", &text);
 
             push_back(&head, option);
-            create_text_file(path, name, text); //wywo≥anie funkcji tworzπcej plik tekstowy
+            create_text_file(path, name, text); //wywo≈Çanie funkcji tworzƒÖcej plik tekstowy
             break;
 
         case 4:
-            printf("Podaj úcieøkÍ bezwzglÍdnπ do katalogu z ktÛrego chcesz usunπÊ plik: ");
+            printf("Podaj ≈õcie≈ºkƒô bezwzglƒôdnƒÖ do katalogu z kt√≥rego chcesz usunƒÖƒá plik: ");
             scanf("%s", &path);
 
-            printf("Podaj nazwÍ pliku: ");
+            printf("Podaj nazwƒô pliku: ");
             scanf("%s", &name);
 
             push_back(&head, option);
-            remove_text_file(path, name);   //wywo≥anie funkcji usuwajπcej plik tekstowy
+            remove_text_file(path, name);   //wywo≈Çanie funkcji usuwajƒÖcej plik tekstowy
             break;
 
         case 5:
-            printf("Podaj úcieøkÍ bezwzglÍdnπ do katalogu w ktÛrym chcesz zmieniÊ nazwÍ: ");
+            printf("Podaj ≈õcie≈ºkƒô bezwzglƒôdnƒÖ do katalogu w kt√≥rym chcesz zmieniƒá nazwƒô: ");
             scanf("%s", &path);
 
-            printf("Podaj starπ nazwÍ pliku: ");
+            printf("Podaj starƒÖ nazwƒô pliku: ");
             scanf("%s", &old_name);
 
-            printf("Podaj nowπ nazwÍ pliku: ");
+            printf("Podaj nowƒÖ nazwƒô pliku: ");
             scanf("%s", &new_name);
 
             push_back(&head, option);
-            rename_file(path, old_name, new_name);  //wywo≥anie funkcji zmieniajπcej nazwÍ pliku
+            rename_file(path, old_name, new_name);  //wywo≈Çanie funkcji zmieniajƒÖcej nazwƒô pliku
             break;
 
         case 6:
-            printf("Podaj úcieøkÍ bezwzglÍdnπ pliku ktÛry chcesz skopiowaÊ: ");
+            printf("Podaj ≈õcie≈ºkƒô bezwzglƒôdnƒÖ pliku kt√≥ry chcesz skopiowaƒá: ");
             scanf("%s", &path);
 
-            printf("Podaj úcieøkÍ bezwzglÍdnπ do miejsca w ktÛrym ma sie znaleüÊ skopiowany plik: ");
+            printf("Podaj ≈õcie≈ºkƒô bezwzglƒôdnƒÖ do miejsca w kt√≥rym ma sie znale≈∫ƒá skopiowany plik: ");
             scanf("%s", &destiny);
 
             push_back(&head, option);
-            copy(path, destiny);   //wywo≥anie funkcji kopiujπcej pliki
+            copy(path, destiny);   //wywo≈Çanie funkcji kopiujƒÖcej pliki
             break;
 
         case 7:
-            printf("Podaj úcieøkÍ bezwzglÍdnπ pliku o ktÛrym chesz siÍ coú dowiedzieÊ: ");
+            printf("Podaj ≈õcie≈ºkƒô bezwzglƒôdnƒÖ pliku o kt√≥rym chesz siƒô co≈õ dowiedzieƒá: ");
             scanf("%s", &path);
 
             push_back(&head, option);
-            information(path);   //wyúwietlanie informacji
+            information(path);   //wy≈õwietlanie informacji
             break;
 
             //Prace nad drugim kamieniem milowym
         case 8:
-            printf("Podaj na jakim dysku chesz szukaÊ: ");
+            printf("Podaj na jakim dysku chesz szukaƒá: ");
             scanf("%s", &path);
 
-            printf("Podaj nazwÍ pliku ktÛrego szukasz: ");
+            printf("Podaj nazwƒô pliku kt√≥rego szukasz: ");
             scanf("%s", &name);
 
             push_back(&head, option);
@@ -166,8 +166,8 @@ int main() {
         default:
             SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);   //zmiana koloru na czerwony
             printf("Podaj wlasciwa opcje.");
-            Sleep(1000);    //uúpienie programu na 1s
-            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);   //Zmiana koloru na bia≥y
+            Sleep(1000);    //u≈õpienie programu na 1s
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);   //Zmiana koloru na bia≈Çy
             break;
         }
     }
@@ -178,26 +178,26 @@ int main() {
 
 //wstawianie danych do listy
 void push_back(node** head, int option) {
-    //jeúli pierwszy element listy jest pusty, czyli lista nie istnieje  
+    //je≈õli pierwszy element listy jest pusty, czyli lista nie istnieje  
     if (*head == NULL) {
-        *head = (node*)malloc(sizeof(node));    //weü pierwszπ komÛrkÍ listy, zarezerwuj tylko tyle pamiÍci ile                                          potrzebujesz dla zmiennych ze struktury.
-        (*head)->data = option;     //nastÍpnie do zmiennej 'data' przekaø wartoúÊ zmiennej 'option'.
-        (*head)->next = NULL;       //weü pierwszy element listy, stwÛrz kolejny i ustaw jego wartoúÊ na NULL.
+        *head = (node*)malloc(sizeof(node));    //we≈∫ pierwszƒÖ kom√≥rkƒô listy, zarezerwuj tylko tyle pamiƒôci ile potrzebujesz dla zmiennych ze struktury.
+        (*head)->data = option;     //nastƒôpnie do zmiennej 'data' przeka≈º warto≈õƒá zmiennej 'option'.
+        (*head)->next = NULL;       //we≈∫ pierwszy element listy, stw√≥rz kolejny i ustaw jego warto≈õƒá na NULL.
     }
     //w przeciwnym wypadku 
     else {
-        node* current = *head;  //weü pierwszy element i przipisz do zmiennej 'currnet'
+        node* current = *head;  //we≈∫ pierwszy element i przipisz do zmiennej 'currnet'
 
-        while (current->next != NULL)   //dopÛki kolejne elementy listy nie sπ puste iteruj po liúcie
+        while (current->next != NULL)   //dop√≥ki kolejne elementy listy nie sƒÖ puste iteruj po li≈õcie
             current = current->next;
 
-        current->next = (node*)malloc(sizeof(node));    //weü pusty element na koÒcu listy i zarezerwuj miejsce
-        current->next->data = option;   //do utworzonego miejsca przypisz zmiennπ
-        current->next->next = NULL;     //utwÛrz kolejny element listy i ustaw jego wartoúÊ na NULL
+        current->next = (node*)malloc(sizeof(node));    //we≈∫ pusty element na ko≈Ñcu listy i zarezerwuj miejsce
+        current->next->data = option;   //do utworzonego miejsca przypisz zmiennƒÖ
+        current->next->next = NULL;     //utw√≥rz kolejny element listy i ustaw jego warto≈õƒá na NULL
     }
 }
 
-//wyúwietlanie listy
+//wy≈õwietlanie listy
 void show(node* head) {
     printf("\n");
     if (head == NULL) {
@@ -206,29 +206,29 @@ void show(node* head) {
     }
     else {
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
-        node* current = head;   //weü pierwszy element i przypisz do zmienej
+        node* current = head;   //we≈∫ pierwszy element i przypisz do zmienej
         do {
-            printf(" %d ", current->data);  //wypisz zawartoúÊ zmiennej data
-            current = current->next;    //przejdü do kolejnego elementu listy
+            printf(" %d ", current->data);  //wypisz zawarto≈õƒá zmiennej data
+            current = current->next;    //przejd≈∫ do kolejnego elementu listy
         } while (current != NULL); //iteruj do ostatniego elementu, czy do napotkania NULL'a
     }
 }
 
 void create_directory(char path[], char name[]) {
 
-    char command[] = "md ";    //zmiennea przechowÛjπca polecenie systemowe 
+    char command[] = "md ";    //zmiennea przechow√≥jƒÖca polecenie systemowe 
     char cmd[100] = "";   //zmienna na polecenie
 
-    strcat(cmd, command);   //do≥πczenie do zmiennej 'cmd' zmiennej 'command'
-    strcat(cmd, path);      //do≥πczenie zmiennej 'path' pobranej od uøytkownika
-    strcat(cmd, name);      //do≥aczenie zmiennej pobranej od uøytkownika
+    strcat(cmd, command);   //do≈ÇƒÖczenie do zmiennej 'cmd' zmiennej 'command'
+    strcat(cmd, path);      //do≈ÇƒÖczenie zmiennej 'path' pobranej od u≈ºytkownika
+    strcat(cmd, name);      //do≈Çaczenie zmiennej pobranej od u≈ºytkownika
 
     //na tym etapie funkcji polecenie jest gotowe, "posklejane"
 
-    system(cmd);        //wywo≥anie funkcji, ktÛra jako parametr przyjmuje polecenie do wykonania
+    system(cmd);        //wywo≈Çanie funkcji, kt√≥ra jako parametr przyjmuje polecenie do wykonania
 }
 
-//Poniøsze funkcjie zosta≥y zbudowane na zasadzie opisanej w funkcji 'create_directory'
+//Poni≈ºsze funkcjie zosta≈Çy zbudowane na zasadzie opisanej w funkcji 'create_directory'
 
 void remove_directory(char path[], char name[]) {
 
