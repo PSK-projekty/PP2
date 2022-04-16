@@ -180,7 +180,7 @@ int main() {
 void push_back(node** head, int option) {
     //jeœli pierwszy element listy jest pusty, czyli lista nie istnieje  
     if (*head == NULL) {
-        *head = (node*)malloc(sizeof(node));    //weŸ pierwsz¹ komórkê listy, zarezerwuj tylko tyle pamiêci ile                                          potrzebujesz dla zmiennych ze struktury.
+        *head = (node*)malloc(sizeof(node));    //weŸ pierwsz¹ komórkê listy, zarezerwuj tylko tyle pamiêc ile potrzebujesz dla zmiennych ze struktury.
         (*head)->data = option;     //nastêpnie do zmiennej 'data' przeka¿ wartoœæ zmiennej 'option'.
         (*head)->next = NULL;       //weŸ pierwszy element listy, stwórz kolejny i ustaw jego wartoœæ na NULL.
     }
