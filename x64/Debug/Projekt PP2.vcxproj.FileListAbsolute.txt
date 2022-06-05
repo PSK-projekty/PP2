@@ -1,2 +1,3 @@
 F:\Semestr II\Podstawy programowania 2\Projekt\Github\x64\Debug\Projekt PP2.exe
 C:\Users\supie\Desktop\Projekt\PP2\x64\Debug\Projekt PP2.exe
+F:\Semestr II\Podstawy programowania 2\Projekt\Github\Kod\x64\Debug\Projekt PP2.exe
